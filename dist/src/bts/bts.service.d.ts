@@ -13,7 +13,6 @@ export declare class BtsService {
     constructor(prisma: PrismaService);
     findAll(filter?: BtsFilter): Promise<{
         data: {
-            id: number;
             slNo: number | null;
             airtelCode: string | null;
             robiCode: string | null;
@@ -29,6 +28,7 @@ export declare class BtsService {
             guardNames: string | null;
             inchargeNames: string | null;
             remarks: string | null;
+            id: number;
             latitude: number | null;
             longitude: number | null;
             createdAt: Date;
@@ -42,7 +42,6 @@ export declare class BtsService {
         };
     }>;
     findOne(id: number): Promise<{
-        id: number;
         slNo: number | null;
         airtelCode: string | null;
         robiCode: string | null;
@@ -58,6 +57,7 @@ export declare class BtsService {
         guardNames: string | null;
         inchargeNames: string | null;
         remarks: string | null;
+        id: number;
         latitude: number | null;
         longitude: number | null;
         createdAt: Date;
@@ -66,7 +66,6 @@ export declare class BtsService {
     getDistricts(): Promise<string[]>;
     getThanasByDistrict(district: string): Promise<string[]>;
     create(data: any): Promise<{
-        id: number;
         slNo: number | null;
         airtelCode: string | null;
         robiCode: string | null;
@@ -82,13 +81,13 @@ export declare class BtsService {
         guardNames: string | null;
         inchargeNames: string | null;
         remarks: string | null;
+        id: number;
         latitude: number | null;
         longitude: number | null;
         createdAt: Date;
         updatedAt: Date;
     }>;
     update(id: number, data: any): Promise<{
-        id: number;
         slNo: number | null;
         airtelCode: string | null;
         robiCode: string | null;
@@ -104,13 +103,13 @@ export declare class BtsService {
         guardNames: string | null;
         inchargeNames: string | null;
         remarks: string | null;
+        id: number;
         latitude: number | null;
         longitude: number | null;
         createdAt: Date;
         updatedAt: Date;
     }>;
     remove(id: number): Promise<{
-        id: number;
         slNo: number | null;
         airtelCode: string | null;
         robiCode: string | null;
@@ -126,6 +125,7 @@ export declare class BtsService {
         guardNames: string | null;
         inchargeNames: string | null;
         remarks: string | null;
+        id: number;
         latitude: number | null;
         longitude: number | null;
         createdAt: Date;

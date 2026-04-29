@@ -34,3 +34,17 @@ model Bts {
 
   @@map("bts")
 }
+
+model Client {
+  id            Int      @id @default(autoincrement())
+  slNo          Int?
+  name          String
+  location      String?
+  address       String?
+  contactPerson String?
+  contactNo     String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("clients")
+}
