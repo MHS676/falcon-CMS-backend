@@ -13,13 +13,16 @@ export declare class BtsService {
     constructor(prisma: PrismaService);
     findAll(filter?: BtsFilter): Promise<{
         data: {
+            id: number;
             slNo: number | null;
+            address: string | null;
+            createdAt: Date;
+            updatedAt: Date;
             airtelCode: string | null;
             robiCode: string | null;
             siteType: string | null;
             district: string | null;
             thana: string | null;
-            address: string | null;
             securityVendor: string | null;
             serviceType: string | null;
             posts: number | null;
@@ -28,11 +31,8 @@ export declare class BtsService {
             guardNames: string | null;
             inchargeNames: string | null;
             remarks: string | null;
-            id: number;
             latitude: number | null;
             longitude: number | null;
-            createdAt: Date;
-            updatedAt: Date;
         }[];
         meta: {
             total: number;
@@ -42,13 +42,16 @@ export declare class BtsService {
         };
     }>;
     findOne(id: number): Promise<{
+        id: number;
         slNo: number | null;
+        address: string | null;
+        createdAt: Date;
+        updatedAt: Date;
         airtelCode: string | null;
         robiCode: string | null;
         siteType: string | null;
         district: string | null;
         thana: string | null;
-        address: string | null;
         securityVendor: string | null;
         serviceType: string | null;
         posts: number | null;
@@ -57,22 +60,22 @@ export declare class BtsService {
         guardNames: string | null;
         inchargeNames: string | null;
         remarks: string | null;
-        id: number;
         latitude: number | null;
         longitude: number | null;
-        createdAt: Date;
-        updatedAt: Date;
     }>;
     getDistricts(): Promise<string[]>;
     getThanasByDistrict(district: string): Promise<string[]>;
     create(data: any): Promise<{
+        id: number;
         slNo: number | null;
+        address: string | null;
+        createdAt: Date;
+        updatedAt: Date;
         airtelCode: string | null;
         robiCode: string | null;
         siteType: string | null;
         district: string | null;
         thana: string | null;
-        address: string | null;
         securityVendor: string | null;
         serviceType: string | null;
         posts: number | null;
@@ -81,20 +84,20 @@ export declare class BtsService {
         guardNames: string | null;
         inchargeNames: string | null;
         remarks: string | null;
-        id: number;
         latitude: number | null;
         longitude: number | null;
-        createdAt: Date;
-        updatedAt: Date;
     }>;
     update(id: number, data: any): Promise<{
+        id: number;
         slNo: number | null;
+        address: string | null;
+        createdAt: Date;
+        updatedAt: Date;
         airtelCode: string | null;
         robiCode: string | null;
         siteType: string | null;
         district: string | null;
         thana: string | null;
-        address: string | null;
         securityVendor: string | null;
         serviceType: string | null;
         posts: number | null;
@@ -103,20 +106,20 @@ export declare class BtsService {
         guardNames: string | null;
         inchargeNames: string | null;
         remarks: string | null;
-        id: number;
         latitude: number | null;
         longitude: number | null;
-        createdAt: Date;
-        updatedAt: Date;
     }>;
     remove(id: number): Promise<{
+        id: number;
         slNo: number | null;
+        address: string | null;
+        createdAt: Date;
+        updatedAt: Date;
         airtelCode: string | null;
         robiCode: string | null;
         siteType: string | null;
         district: string | null;
         thana: string | null;
-        address: string | null;
         securityVendor: string | null;
         serviceType: string | null;
         posts: number | null;
@@ -125,10 +128,7 @@ export declare class BtsService {
         guardNames: string | null;
         inchargeNames: string | null;
         remarks: string | null;
-        id: number;
         latitude: number | null;
         longitude: number | null;
-        createdAt: Date;
-        updatedAt: Date;
     }>;
 }
